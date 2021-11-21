@@ -1,5 +1,7 @@
 package co.com.choucair.certification.reto.stepdefinitions;
 
+import co.com.choucair.certification.reto.model.UtestData;
+import co.com.choucair.certification.reto.task.Formulario;
 import co.com.choucair.certification.reto.task.OpenUp;
 import co.com.choucair.certification.reto.task.Registro;
 import cucumber.api.java.Before;
@@ -9,7 +11,10 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-public class ChoucairAcademyStepDefintions {
+import java.util.List;
+
+
+public class UtestStepDefintions {
     @Before
     public void setStage(){
         OnStage.setTheStage(new OnlineCast());
@@ -22,8 +27,10 @@ public class ChoucairAcademyStepDefintions {
     }
 
     @When("^inicia el proceso de registro en Utest$")
-    public void iniciaElProcesoDeRegistroEnUtest() {
-
+    public void iniciaElProcesoDeRegistroEnUtest(List<UtestData> utestData) {
+        OnStage.theActorInTheSpotlight().attemptsTo(Formulario.the(utestData.get(0).getStrNombre(),utestData.get(0).getStrApellido(),
+                utestData.get(0).getStrCorreo(),utestData.get(0).getStrIdioma(), utestData.get(0).getStrMes(),utestData.get(0).getStrDia(),
+                utestData.get(0).getStrAno()));
     }
 
     @Then("^verifica el proceso final de registro$")
