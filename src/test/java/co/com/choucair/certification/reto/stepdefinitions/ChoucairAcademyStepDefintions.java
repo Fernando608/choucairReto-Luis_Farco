@@ -1,6 +1,7 @@
 package co.com.choucair.certification.reto.stepdefinitions;
 
 import co.com.choucair.certification.reto.task.OpenUp;
+import co.com.choucair.certification.reto.task.Registro;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -16,7 +17,7 @@ public class ChoucairAcademyStepDefintions {
 
     @Given("^Luis quiere registrarse en el sitio Utest$")
     public void luisQuiereRegistrarseEnElSitioUtest() {
-        OnStage.theActorCalled("Luis").wasAbleTo(OpenUp.thePage());
+        OnStage.theActorCalled("Luis").wasAbleTo(OpenUp.thePage(), Registro.onThePage());
 
     }
 
