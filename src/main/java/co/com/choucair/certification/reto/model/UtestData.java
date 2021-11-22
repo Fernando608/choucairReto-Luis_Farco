@@ -10,7 +10,19 @@ public class UtestData {
     private String strDia;
     private String strMes;
     private String strAno;
+    private String strClave;
+    private String strTitulo;
 
+    public String getStrTitulo() {
+        return strTitulo;
+    }
+
+    public void setStrTitulo(String strTitulo) {
+        this.strTitulo = strTitulo;
+    }
+
+    public String getStrClave() {  return strClave;   }
+    public void setStrClave(String strClave) { this.strClave = strClave;   }
     public String getStrNombre() {
         return strNombre;
     }

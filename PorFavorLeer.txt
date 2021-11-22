@@ -1,0 +1,17 @@
+ 
+Se distribuyo la historia de usuario de la siguiente manera.
+
+
+Scenario: Registrar en el sitio Utest
+
+    Given Luis quiere registrarse en el sitio Utest
+
+    When  inicia el proceso de registro en Utest
+        
+    Then  verifica el proceso final de registro
+
+OBS: En el proceso final quería que después del último botón de enviar, fuera a *Login* e ingrese los
+
+  datos *Correo y Contraseña* y después capté el mensaje donde pide verificar el correo. 
+Pero, presente problema con el reCAPTCHA y solo tomé el texto del botón final como confirmación 
+de un Registro Exitoso.         
